@@ -1,20 +1,76 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+  
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+
+
+<content>
+  <ion-header [ngClass]="{'hidden': !this.showHeader,
+                        'show': this.showHeader}">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title>
+        <span (click)="refresh()" class="name"> 
+          <img style="float: left; width: 100px; height: 100px;"  src="assets/icon/logo.png">
+        </span>
+        <span (click)="openCV()" class="resume"> Resume </span>
+        <span class="category" *ngFor="let item of category; let i = index">
+          <span (click)="gotoDiv(item[0])" class="number"> 0{{3-i}}. </span>
+          <span (click)="gotoDiv(item[0])"> {{item[0]}} </span>
+        </span>
+      </ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-icon class="menuButton" (click)="this.sideMenu.menu.toggle('menu')" slot="start" name="reorder-four-outline"></ion-icon>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="content">
+
+    <section>
+
+    </section>
+
+    <div id="About" class="block" #About>
+      <app-about ></app-about>
+    </div>
+  
+    
+    <div id="Projects" #About>
+      <app-projects id="Projects" ></app-projects>
+    </div>
+
+    <!-- <app-work id="Work" class="component"></app-work> -->
+
+    <div id="Contact" class="contact">
+      <div class="text">
+        <ion-label class="more"> Want to know more ? </ion-label>
+      </div>
+      <div class="text">
+        <ion-label style="width: 100%;" class="textTitle"> Click here to send me an email 🔥, take a look to my resume if you are interested 😄 </ion-label>
+      </div>
+      <div class="text">
+        <ion-button class="emailButton" fill="outline"  href="mailto:kleumassi1@gmail.com?Subject=Personal website &body=Hi kevin, " target="_top">
+          Send E-Mail
+        </ion-button>
+      </div>
+
+    </div>
+
   </div>
-</ion-content>
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="mail-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button (click)="navigate('https://github.com/Lordtitan001')">
+        <ion-icon name="logo-github"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button (click)="navigate('https://www.linkedin.com/in/kevin-leumassi-946895172/')">
+        <ion-icon  name="logo-linkedin"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button (click)="navigate('https://www.instagram.com/kevin_lems/')">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+  <footer style="text-align: center; background-color: #1f1f1f;"> 
+      <ion-label style="width: 100%; position: relative; top: 80%;" class="textTitle"> Designed and build by <span style="color: var(--primary);"> Kevin Leumassi </span> </ion-label>
+  </footer>
+
+</content>

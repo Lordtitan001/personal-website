@@ -1,3 +1,24 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+    <!--  our side menu  -->
+    <ion-menu menuId="menu" contentId="main">
+      <ion-header>
+        <ion-toolbar>
+          <img style="float: left; width: 70px; height: 70px;"  src="assets/icon/logo.png">
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-menu-toggle auto-hide="true">
+          <div *ngFor="let item of this.sideMenu.category.reverse(); let i = index">
+            <span (click)="this.sideMenu.gotoDiv(item[0])" class="number"> 0{{i+1}}. </span>
+            <span (click)="this.sideMenu.gotoDiv(item[0])"> {{item[0]}} </span>
+          </div>
+          <div>
+            <span (click)="this.sideMenu.openCV()" class="resume"> Resume </span>
+          </div>
+        </ion-menu-toggle>
+      </ion-content>
+    </ion-menu>
+    <!-- the main content -->
+    <ion-router-outlet id="main"></ion-router-outlet>
+
 </ion-app>

@@ -1,0 +1,151 @@
+.images {
+  width: 45%;
+  position: relative;
+  filter: grayscale(1) blur(0.4px);
+  cursor: pointer;
+  border: medium black solid;
+  border-radius: 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  top: 35px;
+  margin-bottom: 60px;
+  height: 80%;
+  left: 500px;
+}
+.images:hover {
+  filter: unset;
+  border-radius: 0px;
+}
+.desktop {
+  position: relative;
+  transform: scale(0.5);
+  left: -500px;
+  float: left;
+  border-radius: 0px;
+}
+.flagship{
+  margin-right: 20px;
+  left: -500px;
+}
+.first {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  box-sizing: border-box;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+@media  screen and (max-width: 1064px){
+  .first {
+    margin-bottom: 150px;
+  }
+
+  .project{
+    top: 120px;
+  }
+}
+
+
+.information {
+  position: relative;
+  width: 50%;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  top: 30px;
+  color: white;
+  background-color: rgb(29, 29, 29);
+  border: medium rgb(26, 25, 25) solid;
+  padding: 10px;
+}
+
+
+ion-content {
+  position: relative;
+  top: 50px;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+app-project-card {
+  position: relative;
+  width: 48%;
+  float: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: block;
+  min-height: 300px;
+}
+
+
+.project-card {
+  top: 400px;
+}
+
+@media  screen and (max-width: 900px){
+  app-project-card {
+    width: 98%;
+  }
+  .images {
+    width: 100%;
+  }
+  .first {
+    height: fit-content;
+  }
+  .project{
+    top: 0px;
+  }
+}
+
+.moreButton {
+    position: relative;
+    font-size: large;
+    padding: 10px 12px;
+    border-radius: 4px;
+    box-sizing: 100px 20px;
+    border: medium var(--primary) solid;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.moreButton:hover {
+    color: white;
+    background-color: var(--primary);
+    transition: 0.5s;
+}
+
+.more {
+  position: relative;
+  font-size: xx-large;
+  padding: 10px 12px;
+  border-radius: 4px;
+  box-sizing: 100px 20px;
+  color: var(--primary);
+  font-weight: bold;
+  width: 100% !important;
+  margin-left: auto;
+  text-align: center;
+  display: inline-block;
+}
+
+.text {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+content{
+  overflow: hidden;
+  display: contents;
+}
+
+.project{
+  height: 100%;
+  width: 100%;
+  display: block;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+}

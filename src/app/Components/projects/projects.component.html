@@ -1,0 +1,25 @@
+
+<content class="project">
+
+  <header class="title">
+    <span style="color: var(--primary); margin-right: 20px;">02.</span>
+    <span class="textTitle"> Personal projects </span>
+  </header>
+  <div class="first">
+    <app-project-card class="flagship" style="float: left;" [project]="primary"></app-project-card>
+    <img style="float: left;" class="images" [src]="desktopVersion">
+  </div>
+  <div class="first">
+    <app-project-card class="flagship" style="float: left;" [project]="secondary"></app-project-card>
+    <img style="float: left;" class="images" [src]="desktopVersion2">
+  </div>
+  <div>
+    <span class="more" #more> <span> More projects I have worked on </span>  </span>
+  </div>
+ 
+
+  <div>
+    <app-project-card class="project-card" [project]="item" *ngFor="let item of projects"> </app-project-card>
+  </div>
+
+</content>

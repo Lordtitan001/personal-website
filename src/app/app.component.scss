@@ -1,0 +1,24 @@
+.resume {
+    margin-bottom: 20px;
+    float: left;
+}
+
+div {
+    margin: 10px 30px;
+    font-size: larger;
+    padding-top: 20px;
+}
+
+
+span{
+    cursor: pointer;
+}
+
+.resume:hover {
+    color: white;
+}
+
+span:hover{
+    cursor: pointer;
+    color: var(--primary);
+}

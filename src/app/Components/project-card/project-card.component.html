@@ -1,0 +1,19 @@
+
+<ion-card>
+  <ion-item>
+    <ion-icon (click)="navigate(project.github)" *ngIf="project.github" name="logo-github" slot="end"></ion-icon>
+    <ion-icon (click)="navigate(project.link)" *ngIf="project.link" name="open-outline" slot="end"></ion-icon>
+    <ion-card-header>
+      <ion-card-title color="primary"> {{project.name}} </ion-card-title>
+    </ion-card-header>
+  </ion-item>
+
+  <ion-card-content>
+    <ion-label>
+      {{project.description}}
+    </ion-label>
+    <div style="position: relative; margin-top: 20px">
+      <span style="margin-right: 10px; color: var(--primary);" *ngFor="let item of project.technologies">{{item}}</span>
+    </div>
+  </ion-card-content>
+</ion-card>

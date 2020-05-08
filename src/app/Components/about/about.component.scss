@@ -1,0 +1,50 @@
+.image {
+  width: 45%;
+  position: relative;
+  cursor: pointer;
+  border: medium black solid;
+  border-radius: 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  top: -20px;
+}
+.information {
+  position: relative;
+  width: 50%;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  top: 100px;
+  color: white;
+  background-color: rgb(29, 29, 29);
+  border: medium rgb(26, 25, 25) solid;
+  padding: 10px;
+}
+content{
+  overflow: hidden;
+  display: contents;
+}
+.about {
+  height: 100%;
+  width: 100%;
+  display: block;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+div {
+  height: fit-content;
+  width: fit-content;
+}
+
+@media screen and (max-width: 900px) {
+  .image {
+    width: 100%;
+    top: 0px;
+
+  }
+  .information {
+    width: 100%;
+    top: 20px;
+  }
+}

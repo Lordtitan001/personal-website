@@ -1,0 +1,34 @@
+
+<content class="about">  
+  <header class="title">
+    <span style="color: var(--primary); margin-right: 20px;">01.</span>
+    <span class="textTitle"> About me </span>
+  </header>
+  
+  <div class="data">
+    <ion-card style="float: left;" class="information letter">
+      <ion-item>
+        <ion-card-header>
+          <ion-card-title style="font-size: x-large;">Hi, I'm <span style="color: var(--primary);"> Kevin. </span></ion-card-title>
+          <ion-card-subtitle>I <span style="color: var(--primary);"> build </span> and <span style="color: var(--primary);"> design </span>  web application.</ion-card-subtitle>
+        </ion-card-header>
+      </ion-item>
+      
+      <ion-card-content style="font-size: larger;" id="text">
+        I am a software develloper with 2 Years of experience building 
+        and designing web application and professional websites.
+        During my journey as develloper I have done some internships that brought me a professional experience
+        and I have been I have been crafting my skills by working on several personal project.
+        Are you a recruiter ? a startup ? or a small buisness ?
+      </ion-card-content>
+
+      <ion-button id="button" fill="outline" style="margin-left: 10px; opacity: 0;" (click)="sideMenu.gotoDiv('Projects')">
+        Have a look
+      </ion-button>
+    </ion-card>
+  
+    <img style="float: left;" id="image" class="image" [src]="profile">
+  
+  </div>
+</content>
+
